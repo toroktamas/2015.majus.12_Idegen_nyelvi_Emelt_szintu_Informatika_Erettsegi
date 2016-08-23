@@ -69,9 +69,13 @@ print("7. feladat")
 szotarfiu = {}
 szotarlany = {}
 for f in set(fiu):
-    szotarfiu[fiu.count(f)] = f
+    if fiu.count(f) not in szotarfiu:
+        szotarfiu[fiu.count(f)] = []
+    szotarfiu[fiu.count(f)].append(f)
 for l in set(lany):
-    szotarlany[lany.count(l)] = l
+    if lany.count(l) not in szotarlany:
+        szotarlany[lany.count(l)] = []
+    szotarlany[lany.count(l)].append(l)
 #print(szotarfiu,szotarlany)
-print("Fiuk kozul {} szerepelt a legtobbszor.".format([szotarfiu[k] for k in sorted(szotarfiu.keys())][-1] ))
-print("Lanyok kozul {} szerepelt a legtobbszor.".format([szotarlany[k] for k in sorted(szotarlany.keys())][-1] ))
+print("Fiuk kozul {} szerepelt a legtobbszor.".format(', '.join([szotarfiu[k] for k in sorted(szotarfiu.keys())][-1] )))
+print("Lanyok kozul {} szerepelt a legtobbszor.".format(', '.join([szotarlany[k] for k in sorted(szotarlany.keys())][-1] )))

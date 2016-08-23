@@ -1,2 +1,2 @@
-Lanyok: Luca, Katalin, Adrienn, Emma, Vilma, Szilvia, Elza, Fruzsina, Judit, Gabriella, Irma, Szabina
-mFiuk: Kelemen, Bertalan, Lajos, Igor, Kolos, Alfonz, Tivadar, Ede, Imre, Attila, Salamon, Marcell
+Lanyok: Katalin, Irma, Luca, Emma, Fruzsina, Judit, Szilvia, Vilma, Gabriella, Szabina, Adrienn, Elza
+Fiuk: Salamon, Lajos, Marcell, Kelemen, Attila, Imre, Igor, Ede, Alfonz, Tivadar, Kolos, Bertalan
