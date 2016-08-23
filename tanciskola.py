@@ -56,28 +56,22 @@ if bemutat== False:
 """Keszitsen listat a bemutaton resztvett lanyokrol es fiukrol es ki kell irni a szepeplok.txt fajlba."""
 lany = []
 fiu = []
-for a in tancrend.values():
-    if a["Lany neve"] not in lany:
-        lany.append(a["Lany neve"])
-    if a["Fiu neve"] not in fiu:
-        fiu.append(a["Fiu neve"])
+for v in tancrend.values():
+    fiu.append(v["Fiu neve"])
+    lany.append(v["Lany neve"])
 
 with open("szereplok.txt", "wt", encoding="utf-8") as g:
-    g.write("Lanyok: {0}\nm".format(", ".join(lany)))
-    g.write("Fiuk: {}".format(", ".join(fiu)))
+    g.write("Lanyok: {0}\n".format(", ".join(set(lany))))
+    g.write("Fiuk: {}".format(", ".join(set(fiu))))
     
 print("7. feladat")
 """Ki kell irni melyik fiu szerepel a legtobbszor a fiuk kozul es melyik lany szerepel a legtobszor a lanyok kozul."""
-fiuk = []
-lanyok = []
-for v in tancrend.values():
-    fiuk.append(v["Fiu neve"])
-    lanyok.append(v["Lany neve"])
 szotarfiu = {}
 szotarlany = {}
-for f in set(fiuk):
-    szotarfiu[fiuk.count(f)] = f
+for f in set(fiu):
+    szotarfiu[fiu.count(f)] = f
 for l in set(lany):
-    szotarlany[lanyok.count(l)] = l
+    szotarlany[lany.count(l)] = l
+#print(szotarfiu,szotarlany)
 print("Fiuk kozul {} szerepelt a legtobbszor.".format([szotarfiu[k] for k in sorted(szotarfiu.keys())][-1] ))
 print("Lanyok kozul {} szerepelt a legtobbszor.".format([szotarlany[k] for k in sorted(szotarlany.keys())][-1] ))
