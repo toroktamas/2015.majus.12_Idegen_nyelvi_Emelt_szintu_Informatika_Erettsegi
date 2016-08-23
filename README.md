@@ -1,0 +1,2 @@
+# 2015.majus.12_Idegen_nyelvi_Emelt_szintu_Informatika_Erettsegi
+Megoldas Python programozasi nyelven
